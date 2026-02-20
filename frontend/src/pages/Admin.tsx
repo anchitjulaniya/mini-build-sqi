@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+const url = "https://mini-build-sqi.onrender.com";
 
 export default function Admin() {
   const [prompt, setPrompt] = useState("");
@@ -21,7 +22,7 @@ export default function Admin() {
     const parsed = JSON.parse(data);
 
     const res = await axios.post(
-      "http://localhost:5000/api/sqi/compute",
+      "https://mini-build-sqi.onrender.com/api/sqi/compute",
       parsed
     );
 

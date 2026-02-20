@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.json({ status: "Backend Running 🚀" });
+});
+
 app.use("/api/sqi", sqiRoutes);
 const PORT = process.env.PORT || 5000;
 
